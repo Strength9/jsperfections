@@ -81,8 +81,8 @@ body {
     padding: 0 0 0;
     overflow-x: hidden; 
     color: $Basecolor;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
     font-style: normal;
     font-size:15px;
     line-height:18px;
@@ -95,7 +95,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: clarendon-urw, serif;
+  font-family: 'Artifact';
+  font-weight: normal;
+  font-style: normal;
   font-weight: 300;
 }
 h1 {

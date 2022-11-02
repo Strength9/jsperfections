@@ -339,3 +339,15 @@ function ilc_favicon(){
 	<meta name="theme-color" content="#ffffff">';
 }
 */
+
+
+add_action( 'wp_enqueue_scripts', 'prefix_enqueue_scripts' );
+function prefix_enqueue_scripts() {
+	wp_enqueue_script( 'typekit', '//use.typekit.net/zng0fgl.js', array(), '1.0.0' );
+}
+add_action( 'wp_head', 'prefix_typekit_inline' );
+function prefix_typekit_inline() {
+	if ( wp_script_is( 'typekit', 'enqueued' ) ) {
+		echo '<script type="text/javascript">try{Typekit.load();}catch(e){}</script>';
+	}
+}
