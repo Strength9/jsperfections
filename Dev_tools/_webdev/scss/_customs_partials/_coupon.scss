@@ -1,0 +1,24 @@
+.coupon {
+	.couponholder {
+		margin:0 auto;
+		max-width: $contentwidth;
+		width:90%;
+		background-color:red;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas: "coupontext couponform";
+
+		.coupontext { grid-area: coupontext; }
+		.couponform { grid-area: couponform;
+			color:red;
+		 }
+
+	}
+	
+}

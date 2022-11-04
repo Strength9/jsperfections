@@ -84,8 +84,8 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -101,14 +101,14 @@ body {
   margin: 0;
   padding: 0 0 0;
   overflow-x: hidden;
-  color: rgb(68, 68, 68);
+  color: #717060;
   font-family: open-sans, sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 15px;
   line-height: 18px;
   position: relative;
-  background-color: rgb(246, 242, 235);
+  background-color: #FFF;
 }
 
 h1,
@@ -499,4 +499,121 @@ header .navigation-menu #menu-toggle:checked + .main-navigation li > ul li {
 }
 .wcp-columns .wcp-column.full {
   grid-column: 1/span 2;
+}
+
+.display_grid .linkgrid {
+  background-color: #FFF;
+  width: 900px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(10px, auto);
+}
+.display_grid .linkgrid article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+.display_grid .linkgrid article h1 {
+  margin: 0 auto;
+  padding: 0;
+  font-family: arno-pro-caption, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  text-align: center;
+  order: 1;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+.display_grid .linkgrid article h1 a {
+  color: #B37974;
+  text-decoration: none;
+}
+.display_grid .linkgrid article h1 a:hover {
+  color: #717060;
+}
+.display_grid .linkgrid article .imagesquare {
+  position: relative;
+  background-color: palevioletred;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+.display_grid .linkgrid article .imagesquare:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+  background-size: cover;
+}
+
+#grid {
+  height: 200px;
+  width: 200px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 100px;
+}
+
+#item1 {
+  background-color: lime;
+}
+
+#item2 {
+  background-color: yellow;
+}
+
+#item3 {
+  background-color: blue;
+}
+
+#item4 {
+  background-color: red;
+}
+
+#item5 {
+  background-color: aqua;
+}
+
+.coupon .couponholder {
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 90%;
+  background-color: red;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "coupontext couponform";
+}
+.coupon .couponholder .coupontext {
+  grid-area: coupontext;
+}
+.coupon .couponholder .couponform {
+  grid-area: couponform;
+  color: red;
 }
