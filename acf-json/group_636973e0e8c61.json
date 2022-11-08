@@ -1,9 +1,9 @@
 {
-    "key": "group_63642097081ea",
-    "title": "Block - Card Links",
+    "key": "group_636973e0e8c61",
+    "title": "Preferred Partners",
     "fields": [
         {
-            "key": "field_636420970deb6",
+            "key": "field_636973e1b2df5",
             "label": "Section Title",
             "name": "section_title",
             "aria-label": "",
@@ -16,36 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Preferred Partners",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_636421c50deb7",
-            "label": "Section Text",
-            "name": "section_text",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_636422190deb8",
-            "label": "Cards",
-            "name": "cards",
+            "key": "field_63697427bde07",
+            "label": "Partner Data",
+            "name": "partner_data",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -65,35 +45,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6364228f0deb9",
-                    "label": "Card Image",
-                    "name": "card_image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_636422190deb8"
-                },
-                {
-                    "key": "field_636422bc0deba",
-                    "label": "Card Link",
-                    "name": "card_link",
+                    "key": "field_63697448bde08",
+                    "label": "Partner Link",
+                    "name": "partner_link",
                     "aria-label": "",
                     "type": "link",
                     "instructions": "",
@@ -104,8 +58,34 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "parent_repeater": "field_636422190deb8"
+                    "return_format": "url",
+                    "parent_repeater": "field_63697427bde07"
+                },
+                {
+                    "key": "field_6369745dbde09",
+                    "label": "Partner Logo",
+                    "name": "partner_logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_63697427bde07"
                 }
             ]
         }
@@ -113,9 +93,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "options_page",
                 "operator": "==",
-                "value": "acf\/block-links-grid"
+                "value": "pref-partners"
             }
         ]
     ],
@@ -128,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667854883
+    "modified": 1667855690
 }

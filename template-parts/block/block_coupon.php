@@ -24,13 +24,17 @@ coupon_form
  
  $coupon_title = ! empty( get_field('coupon_title') ) ? '<h2>'.get_field('coupon_title').'</h2>' : 'Coupon Title';
  $coupon_text = ! empty( get_field('coupon_text') ) ? get_field('coupon_text') : 'Text';
- $coupon_background = ! empty( get_field('coupon_background') ) ? 'style="background-image:url('.get_field('coupon_background').');"' : '';
+ $coupon_background = ! empty( get_field('coupon_background') ) ? 'style="background:linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('.get_field('coupon_background').');"' : '';
  $coupon_form = ! empty( get_field('coupon_form') ) ? get_field('coupon_form') : '';
  
 echo '<section '.$anchor.' class="'.$blockclass .'">
-	<div class="couponholder"  '.$coupon_background.'>
-	 	<div class="coupontext">'. $coupon_title.$coupon_text.'</div>
-	 	<div class="couponform">'.$coupon_form.'</div>
-	</div>
+	    <div class="couponholder"  '.$coupon_background.'>
+	 	    <div class="coupongrid">
+                <div class="coupontext">'. $coupon_title.$coupon_text.'<span class="kiss">XXX</span></div>
+	 	       <div class="couponform">'.do_shortcode('[wpforms id="67"]').'</div>
+            </div>
+	    </div>
 </section>';
+
+//
 ?>

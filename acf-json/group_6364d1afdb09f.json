@@ -1,6 +1,6 @@
 {
     "key": "group_6364d1afdb09f",
-    "title": "Coupons",
+    "title": "Block - Coupons",
     "fields": [
         {
             "key": "field_6364d1b03c3c8",
@@ -66,26 +66,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_6364d20c1e4bf",
-            "label": "Coupon Form",
-            "name": "coupon_form",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -106,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667552501
+    "modified": 1667854891
 }

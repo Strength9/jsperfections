@@ -145,9 +145,9 @@ add_filter('image_size_names_choose', 'post_image_sizes');
 		wp_enqueue_script( 'jquery-core' );
 		
 		wp_enqueue_script( 'xray-modern', get_template_directory_uri() . '/assets/js/modern.js','','',true);
-		wp_enqueue_script( 'jquery-core' );
+
 		wp_enqueue_script( 'xray-custom', get_template_directory_uri() . '/assets/js/script.js','','',true);
-		
+		wp_enqueue_script( 'xray-splide', get_template_directory_uri() . '/assets/js/splide.min.js','','',true);
 
 
 		wp_dequeue_style( 'wp-block-library' );
@@ -168,6 +168,15 @@ if( function_exists('acf_add_options_page') ) {
 			'page_title' 	=> $SiteName.' General Settings',
 			'menu_title'	=> $SiteName.' Settings',
 			'menu_slug' 	=> $settingslink,
+			'capability'	=> 'edit_posts',
+			'position'      => 1,
+			'redirect'		=> false
+		));	
+		
+		acf_add_options_page(array(
+			'page_title' 	=> 'Preferred Partners',
+			'menu_title'	=> 'Preferred Partners',
+			'menu_slug' 	=> 'pref-partners',
 			'capability'	=> 'edit_posts',
 			'position'      => 1,
 			'redirect'		=> false
@@ -264,11 +273,7 @@ function example_block_category( $categories, $post ) {
 	add_filter( 'block_categories_all', 'example_block_category', 10, 2);
 
 
-function xray_block_scripts()  { 
-	// get the theme directory style.css and link to it in the header
-	wp_enqueue_script( 'xray-2', get_template_directory_uri() . '/assets/js/slider.js');
-}
-add_action( 'wp_enqueue_scripts', 'xray_block_scripts' ); 
+
 
 
 function random_str(

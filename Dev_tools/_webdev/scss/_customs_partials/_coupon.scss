@@ -1,24 +1,156 @@
 .coupon {
 	.couponholder {
 		margin:0 auto;
-		max-width: $contentwidth;
-		width:90%;
-		background-color:red;
+		max-width: 900px;
+		width:100%;
 		background-size:cover;
 		background-repeat:no-repeat;
 		background-position:center center;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		gap: 0px 0px;
-		grid-auto-flow: row;
-		grid-template-areas: "coupontext couponform";
+		padding:30px;
+		
+			.coupongrid {
+				border:2px solid $pink;
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: minmax(10px, auto) minmax(10px, auto);
+				gap: 30px 0px;
+				grid-auto-flow: row;
+				grid-template-areas: "coupontext" "couponform";
+				padding:25px;
+				
+				
+				
+				.coupontext { grid-area: coupontext; 
+					position:relative;
+					padding-bottom:10px;
+					
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-content: center;
+					align-items: center;
+					
+					
+					h2 {
+						color:#000;
+						font-size:44px;
+						text-align:center;
+					}
+					p {
+						color:$pink;
+						font-family: arno-pro-caption, serif;
+						font-size:18px;
+						text-align:center;
+						
+					}
+					.kiss {
+						color:#000;
+						font-size:24px;
+						font-family: 'Artifact';
+						letter-spacing: 5px;
+						margin:0;
+						padding:0;
+						position:absolute;
+						right:-10px;
+						bottom:5px;
+						transform: rotate(-20deg);
+						
+					}
+				}
+				.couponform { grid-area: couponform;
+					.wpforms-container.wpforms-container-full {
+						margin:0 0 0 auto;
+						padding:0;
+						
+						
+						form {
+						margin:0;
+						padding:0;
+						
+						input {
+							border:0;
+							
+							&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+							  color: $pink;
+							  font-size:16px;
+							  font-family: arno-pro-caption, serif;
+							}
+							&::-moz-placeholder { /* Firefox 19+ */
+							  color: $pink;
+							  font-size:16px;
+							  font-family: arno-pro-caption, serif;
+							}
+							&:-ms-input-placeholder { /* IE 10+ */
+							  color: $pink;
+							  font-size:16px;
+							  font-family: arno-pro-caption, serif;
+							}
+							&:-moz-placeholder { /* Firefox 18- */
+							  color: $pink;
+							  font-size:16px;
+							  font-family: arno-pro-caption, serif;
+							}
+						}
+						button {
+							margin:0 0 0 ;
+							background-color:$pink;
+							color:#FFF;
+							font-family: 'Artifact';
+							font-size:22px;
+							letter-spacing:2px;
+							padding:14px 15px 10px;
+							border-radius:7px;
+							float:right;
+							
+							&:hover {
+								background-color:#000;
+							}
+						}
+					}
+					}
+				 }
+			}
+		
+		@media only screen and (min-width:680px) {
+			width:90%;
+			.coupongrid {
+				gap: 0px 30px;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr;
+				grid-auto-flow: row;
+				grid-template-areas: "coupontext couponform";
+				
+				.coupontext {
+					flex-wrap: wrap;
+					justify-content: flex-start;
+					align-content: center;
+					align-items: center;
+					
+					h2 {text-align:left;}
+					p {text-align:left;}
+				}
+				.couponform { grid-area: couponform;
+					.wpforms-container.wpforms-container-full {
 
-		.coupontext { grid-area: coupontext; }
-		.couponform { grid-area: couponform;
-			color:red;
-		 }
-
+						max-width:300px;
+						
+						form {
+						margin:0;
+						padding:0;
+						
+						button {
+							margin:0 0 0 ;
+							float:right;
+						}
+					}
+					}
+				 }
+			}
+		}	
+			
+			
+  
 	}
 	
 }
