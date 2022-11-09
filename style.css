@@ -1174,7 +1174,7 @@ header .navigation-menu #menu-toggle:checked + .main-navigation li > ul li {
   margin: 0;
   font-size: 36px;
   line-height: 42px;
-  color: #C05B57;
+  color: #000;
   text-align: center;
 }
 @media only screen and (min-width: 400px) {
