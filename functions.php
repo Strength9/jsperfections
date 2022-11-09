@@ -147,7 +147,7 @@ add_filter('image_size_names_choose', 'post_image_sizes');
 		wp_enqueue_script( 'xray-modern', get_template_directory_uri() . '/assets/js/modern.js','','',true);
 
 		wp_enqueue_script( 'xray-custom', get_template_directory_uri() . '/assets/js/script.js','','',true);
-		wp_enqueue_script( 'xray-splide', get_template_directory_uri() . '/assets/js/splide.min.js','','',true);
+		wp_enqueue_script( 'xray-splide', get_template_directory_uri() . '/assets/js/splide.min.js','','',false);
 
 
 		wp_dequeue_style( 'wp-block-library' );
@@ -302,7 +302,7 @@ function remove_posts_menu()
 	 * 
 	 * This will add your Font Awesome Kit to the front-end, the admin back-end,
 	 * and the login screen area.
-	 
+	 */
 	if (! function_exists('fa_custom_setup_kit') ) {
 	  function fa_custom_setup_kit($kit_url = '') {
 		foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
@@ -315,9 +315,9 @@ function remove_posts_menu()
 		}
 	  }
 	}
-fa_custom_setup_kit('https://kit.fontawesome.com/23bfc676af.js');		
+fa_custom_setup_kit('https://kit.fontawesome.com/5ddcc7c573.js');		
 
-*/
+
 /**
 	 * Google Fonts
 	 

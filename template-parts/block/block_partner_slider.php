@@ -22,10 +22,10 @@ include('______partials_global.php');
  
 
  if( have_rows('partner_data','options') ):
-
+$sub_value = '';
      while( have_rows('partner_data','options') ) : the_row();
 
-        $sub_value .= '<li class="splide__slide"><a href="'.get_sub_field('partner_link').'"><img src="'.get_sub_field('partner_logo').'" alt=""/></a></li>';
+        $sub_value .= '<li><a href="'.get_sub_field('partner_link').'"><img src="'.get_sub_field('partner_logo').'" alt=""/></a></li>';
          
      endwhile;
 
@@ -39,25 +39,15 @@ $section_title = ! empty( get_field('section_title','options') ) ? get_field('se
 
 echo '<section '.$anchor.' class="'.$blockclass .'">
     <div class="wcp-columns ">
-        <div class="wcp-column full">
-            <div class="lined"><div class="ct">'.$section_title.'</div></div>
-            <div id="slider" class="splide" role="group" aria-label="Splide Basic HTML Example">
-              <div class="splide__track">
-                    <ul class="splide__list">
+              <div class="wcp-column full">
+                <div class="lined"><div class="ct">'.$section_title.'</div></div>
+                    <ul class="partners">
                         '.$sub_value.'
-                        <li class="splide__slide">Slide 02</li>
-                        <li class="splide__slide">Slide 03</li>
                     </ul>
               </div>
             </div>
-        </div>
-</div>
-</section>
 
-<script>
-  new Splide( "#slider").mount();
-</script>
+</section>';?>
 
 
-';
-?>
+

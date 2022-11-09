@@ -1,11 +1,13 @@
 .quotedivider {
+	max-width:$contentwidth;
+	margin:auto;
 	.lined {
 		
 		position: relative;
 		z-index: 1;
 		text-align:center;
 	
-	&:before {
+		&:before {
 				border-top: 1px solid $pink;
 				content: "";
 				margin: 0 auto;
@@ -54,4 +56,7 @@
 				
 			}
 	}
+	
+	
+
 }
