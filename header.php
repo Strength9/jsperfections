@@ -24,7 +24,6 @@
 <header>
 	
 	<nav class="navigation-menu">
-		
 		  <label class="menuopen" aria-label="Open navigation menu" for="menu-toggle">
 		  <i class="fa-light fa-bars"></i></label>
 		  <input type="checkbox" id="menu-toggle" />
@@ -32,6 +31,11 @@
 		  <div class="logo"><a href="<?php echo home_url(); ?>">Home</a></div>
 		  <label for="menu-toggle"  aria-label="Close navigation menu" class="menuclose"><i class="fa-thin fa-square-xmark"></i></label>%3$s</ul>' ) );?>  
 	</nav>
+	<div class="advert">
+		<div class="content">
+			
+		</div>	
+	</div>
 </header>
 
 
