@@ -1,0 +1,110 @@
+@media screen and (min-width: $mobilebreakpoint ) {
+	header {
+		.navigation-menu {
+			background-color:palegreen;
+			position:absolute;
+			top:0;
+			left:0;
+			bottom:0;
+			width:35%;
+			
+			
+		
+				//height: 70px;
+				
+				
+				.menuopen {display:none; }
+				
+				.main-navigation {
+					width:100%;
+					display:block;
+					flex-direction: row;
+					justify-content: flex-end;
+					margin:0px 0 auto auto;
+					padding:0;
+					
+				  
+				  div.logo {
+					  width: 100%;
+					  height: 60px;
+					  position:relative;
+					  left: 10px;
+					  right:10px;
+					  top: 10px;
+				  }
+					  li {
+						  width:100%;
+						  
+						  position:relative;
+						  display:block;
+						  
+						  &:first-child {
+							  margin-top:100px;
+						  }
+						  
+						  a {
+							padding: 5px 8px;
+							}
+					
+						ul {display:none;
+							position:absolute;
+							top:100%;
+							background-color:$dropdownbackground;
+							margin:0;
+							padding:10px;
+							
+							
+							li {white-space: nowrap;
+								display:block;
+								padding:5px;
+								
+									margin:0;
+									white-space: nowrap;
+									display:block;
+									padding:0px !important;
+									
+									a {
+										display:block;
+										margin:0!important;
+										padding:5px!important;
+									}
+							}
+							
+						}
+						
+						&:hover {
+							ul {display:block;}
+						}
+					}
+				}
+
+		}
+		.advert {
+			background-color:palevioletred;
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			width:65%;
+			
+			.content {
+				position:absolute;
+				top:30px;
+				right:30px;
+				bottom:30px;
+				left:30px;
+				border:3px solid #FFF;
+				@media screen and (min-width: 1000px ) {
+					top:50px;
+					right:50px;
+					bottom:50px;
+					left:50px;
+				}
+			
+			display:block;
+			}
+			
+		}
+	
+	}
+}
