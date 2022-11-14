@@ -205,98 +205,255 @@ p {
   opacity: 1;
 }
 
-/* Desktop Version */
-/* Mobile Version */
-header {
-  top: 0;
+.headstrip {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
+  height: 115px;
+  z-index: 6000;
+}
+.headstrip .menuopen {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  color: #fff;
+  font-size: 35px;
+  padding: 6px 10px 5px;
+  border-radius: 5px;
+}
+.headstrip .menuopen:hover {
+  color: #C05B57;
+}
+.headstrip .logomain {
+  padding: 10px;
+  position: absolute;
+  z-index: 6000;
+  left: 10px;
+  top: 10px;
+}
+.headstrip .logomain img {
+  height: 80px;
+  width: auto;
+}
+.headstrip.fixed {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.headstrip.fixed .menuopen {
+  color: #FFF;
+  background-color: #C05B57;
+}
+
+header {
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
   bottom: 0;
+  width: 100%;
+  left: -100%;
+  height: 100vh;
+  transition: all 0.6s ease-in-out;
   z-index: 7000;
 }
-header .menuclose {
+header.show {
+  left: 0;
+  transition: all 0.6s ease-in-out;
+}
+header aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-color: #FFF;
+  z-index: 8000;
+  width: 100%;
+  left: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 700px) {
+  header aside {
+    width: 230px;
+  }
+}
+header aside .logohome {
+  width: 100px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+}
+header aside .logohome img {
+  width: 100%;
+  height: auto;
+}
+header aside .menuclose {
   position: absolute;
   z-index: 6000;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
   color: #000;
   font-size: 35px;
 }
-header .menuclose:hover {
+header aside .menuclose:hover {
   color: #C05B57;
 }
-header .menuopen {
+header aside .navigation-menu {
   position: absolute;
-  z-index: 6000;
-  right: 20px;
-  top: 20px;
+  margin: 0px 0 0;
+  width: 100%;
+}
+header aside .navigation-menu .navlist {
+  text-align: center;
+  margin: 0 0;
+  width: 100%;
+  padding: 0;
+}
+header aside .navigation-menu .navlist li {
+  list-style: none;
+  padding: 0 20px;
+  margin: 12px 0;
+  text-align: center;
+  font-family: arno-pro-caption, serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+header aside .navigation-menu .navlist li a {
   color: #000;
-  font-size: 35px;
+  text-decoration: none;
 }
-header .menuopen:hover {
+header aside .navigation-menu .navlist li a:hover {
   color: #C05B57;
 }
-header .advert {
-  display: none;
-}
-header .navigation-menu {
-  position: absolute;
-  display: none;
-}
-header .navigation-menu .socialnav {
+header aside .socialnav {
   position: absolute;
   bottom: 20px;
   left: 0;
   width: 100%;
-  background-color: pink;
   padding: 0;
   margin: 0;
 }
-header .navigation-menu .socialnav li {
-  background-color: orange;
+header aside .socialnav li {
   width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
   text-align: center;
   line-height: auto;
+  color: #C05B57;
 }
-header .navigation-menu .socialnav li.title {
+header aside .socialnav li.title {
+  position: relative;
   font-family: "Artifact";
   font-weight: normal;
   font-style: normal;
   font-weight: 300;
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 35px;
   color: #C05B57;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 }
-header .navigation-menu .socialnav li i {
+header aside .socialnav li.title:before {
+  border-top: 1px solid #C05B57;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  z-index: -1;
+}
+header aside .socialnav li.title .ct {
+  background: #fff;
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0;
+  width: auto;
+}
+header aside .socialnav li a {
+  color: #C05B57;
+}
+header aside .socialnav li a i {
   color: inherit;
   font-size: 25px;
   margin: 0 10px;
 }
-header #menu-toggle:checked + .navigation-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  display: block;
+header aside .socialnav li a i:hover {
+  color: #000;
 }
-@media only screen and (min-width: 600px) {
-  header #menu-toggle:checked + .navigation-menu {
-    width: 300px;
-    background-color: green;
+header .advert {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  right: 0;
+}
+@media only screen and (min-width: 700px) {
+  header .advert {
+    display: block;
+    left: 230px;
   }
 }
+header .advert .content {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  right: 35px;
+  bottom: 35px;
+  border: 2px solid #C05B57;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+header .advert .content .detail {
+  max-width: 500px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 30px;
+}
+header .advert .content .detail h1 {
+  color: #C05B57;
+  text-align: center;
+  font-size: 35px;
+  padding: 0 30px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+header .advert .content .detail h1 .ct {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0;
+  max-width: 350px;
+  width: 75%;
+}
+header .advert .content .detail p {
+  color: #000;
+  display: block;
+}
+header .advert .content .detail a {
+  text-decoration: none;
+  margin: 20px auto 0;
+  background-color: #C05B57;
+  color: #FFF;
+  font-family: "Artifact";
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 14px 15px 10px;
+  border-radius: 7px;
+  display: inline-block;
+}
+header .advert .content .detail a:hover {
+  background-color: #000;
+}
 
-/* 
-#menu-toggle:checked + .main-navigation { }
-
-Desktop Version */
 footer {
   background-color: #d69795;
   padding: 50px 0 0;
@@ -975,8 +1132,7 @@ footer div.copyright .wcp-columns .wcp-column a:hover {
   padding: 0 0px;
   margin: 0;
   font-family: arno-pro-caption, serif;
-  max-width: 600px;
-  width: 75%;
+  width: auto;
 }
 .quotedivider .lined .ct p {
   padding: 0;
@@ -1083,8 +1239,7 @@ footer div.copyright .wcp-columns .wcp-column a:hover {
   padding: 0;
   margin: 0;
   font-family: "Artifact";
-  max-width: 600px;
-  width: 75%;
+  width: auto;
   padding: 0;
   margin: 0;
   font-size: 36px;
@@ -1148,6 +1303,34 @@ footer div.copyright .wcp-columns .wcp-column a:hover {
 .partnerslider ul.partners li a img {
   width: 228px;
   height: auto;
+}
+
+.heroheader {
+  background-color: teal;
+  width: 100%;
+  height: 100vh;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.heroheader .wcp-columns {
+  height: 100%;
+}
+.heroheader .wcp-columns .wcp-column {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.heroheader .wcp-columns .wcp-column .herocontainer h1 {
+  color: #FFF;
+}
+.heroheader .wcp-columns .wcp-column .herocontainer img {
+  width: 350px;
+  margin: 30px auto;
 }
 
 .fade-in {

@@ -324,26 +324,26 @@ fa_custom_setup_kit('https://kit.fontawesome.com/5ddcc7c573.js');
 function wpb_add_google_fonts() {
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600', false ); 
 }
- 
-add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
-*/
 
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+ */
 /**
-	 * Favicons
+	 * Favicons */
 	 
 add_action( 'wp_head', 'ilc_favicon');
 function ilc_favicon(){
-	echo '<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon-16x16.png">
-	<link rel="manifest" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/site.webmanifest">
-	<link rel="mask-icon" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon.ico">
+	echo '<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/jsperfections/assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/jsperfections/assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/jsperfections/assets/img/fav/favicon-16x16.png">
+	<link rel="manifest" href="/wp-content/themes/jsperfections/assets/img/fav/site.webmanifest">
+	<link rel="mask-icon" href="/wp-content/themes/jsperfections/assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/wp-content/themes/jsperfections/assets/img/fav/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/browserconfig.xml">
+	<meta name="msapplication-config" content="/wp-content/themes/jsperfections/assets/img/fav/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">';
 }
-*/
+
 
 
 add_action( 'wp_enqueue_scripts', 'prefix_enqueue_scripts' );

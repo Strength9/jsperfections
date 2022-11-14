@@ -1,133 +1,303 @@
-/* Desktop Version */
-$DeskNavLink : #FFF;
-$DeskNavLinkHover : yellow;
-$dropdownbackground : orange;
-
-/* Mobile Version */
-$mobilebreakpoint : 850px;
-$overlaynavcolor : blue;
-$MobileNavLink : #FFF;
-$MobileNavLinkHover : yellow;
-$MobileMenuOpen : #FFF;
-$MobileMenuOpenHover : yellow;
-$MobileMenuClose : #FFF;
-$MobileMenuCloseHover : yellow;
-$innerULborder : rgba(255,255,255,0.7);
-
-
-
-header {
-	top:0;
+.headstrip {
 	position:fixed;
+	top:0;
 	left:0;
 	right:0;
-	bottom:0;
-	z-index: 7000;
-
-		.menuclose {
-			//display:none;
-			position:absolute;
-			z-index:6000;
-			right:20px;
-			top:20px;
-			color:#000;
-			font-size:35px;
-			
-			&:hover {
-				color: $pink;
-			}
-		}
+	
+	height:115px;
+	z-index:6000;
+	
+	.menuopen {
 		
-		#menu-toggle { 
-			//display: none; 
+		position:absolute;
+		
+		right:20px;
+		top:35px;
+		color:#fff;
+		font-size:35px;
+		padding:6px 10px 5px;
+		border-radius:5px;
+		
+		&:hover {
+			color: $pink;
 		}
+	}	
+	.logomain {
+		padding:10px;
+		
+		position:absolute;
+		z-index:6000;
+		left:10px;
+		top:10px;
+		img {
+			height:80px;
+			width:auto;
+		}
+	}
+	
+	&.fixed {
+		background-color:rgba(255,255,255,0.3);
+		
 		.menuopen {
-			position:absolute;
-			z-index:6000;
-			right:20px;
-			top:20px;
-			color:#000;
-			font-size:35px;
-			
-			&:hover {
-				color: $pink;
-			}
+			color:#FFF;
+			background-color: $pink;
 		}
-		.advert {
-			display:none;
-		}
+	}
+}
 
-		.navigation-menu {
-			position:absolute;
-			display:none;
-			.navlist  {
-				
+header {
+	background-color:#FFF;
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:100%;
+	
+	left:-100%;
+	height: 100vh;
+	transition: all .6s ease-in-out;
+	z-index: 7000;
+	
+	&.show {
+		left:0;
+		transition: all .6s ease-in-out;
+		
+	 }
+	
+		
+		
+	aside {	
+		position: absolute;
+		top:0;
+		bottom:0;
+		display:block;
+		background-color:#FFF;
+		z-index:8000;
+		width:100%;
+		left:0;
+		width:100%;
+			
+			
+			
+			@media only screen and (min-width:700px) {
+				width: 230px;
+			  	//left: -230px;
 			}
 			
-			.socialnav {
-				position:absolute;
-				bottom:20px;
-				left:0;
-				width:100%;
-				background-color:pink;
-				padding:0;
-				margin:0;
+			.logohome {
+				width:100px;
+				height:auto;
+				margin:40px auto;
+				display:block;
 				
-				li {
-					background-color:orange;
+				img {
 					width:100%;
-					padding:0;
-					margin:0 ;
-					list-style:none;
-					text-align:center;
-					line-height:auto;
-					
-					
-					&.title {
-						font-family: 'Artifact';
-						  font-weight: normal;
-						  font-style: normal;
-						  font-weight: 300;
-						  font-size:35px;
-						  line-height:40px;
-						  color:$pink;
-						  margin:0 0 30px;
-					}
-					
-					i {color:inherit;
-						font-size:25px;
-						margin:0 10px;
-					}
+					height:auto;;
 					
 				}
 			}
+			
+			.menuclose {
+				//display:none;
+				position:absolute;
+				z-index:6000;
+				right:10px;
+				top:10px;
+				color:#000;
+				font-size:35px;
+				
+				&:hover {
+					color: $pink;
+				}
+			}
+	
+			.navigation-menu {
+				position:absolute;
+				margin:00px 0 0;
+				width:100%;
+				
+				.navlist  {
+					text-align:center;
+					margin:0 0;
+					width:100%;
+					padding:0;
+					
+					li {
+						list-style: none;
+						padding:0 20px;
+						margin:12px 0;
+						text-align:center;
+						font-family: arno-pro-caption, serif;
+						font-weight: normal;
+						font-style: normal;
+						text-transform: uppercase;
+						
+						a {color:#000;
+							text-decoration:none;
+							
+							&:hover {
+								color:$pink;
+							}
+						}
+					}
+				}
+			}
+				
+			.socialnav {
+					position:absolute;
+					bottom:20px;
+					left:0;
+					width:100%;
+					padding:0;
+					margin:0;
+					
+					li {
+						width:100%;
+						padding:0;
+						margin:0 ;
+						list-style:none;
+						text-align:center;
+						line-height:auto;
+						color:$pink;
+						
+						&.title {
+							position: relative;
+							font-family: 'Artifact';
+						  	font-weight: normal;
+						  	font-style: normal;
+						  	font-weight: 300;
+						  	font-size:30px;
+						  	line-height:35px;
+						  	color:$pink;
+						  	margin:0 0 20px;
+						  	
+						  	&:before {
+								  	border-top: 1px solid $pink;
+								  	content: "";
+								  	margin: 0 auto;
+								  	position: absolute;
+								  	top: calc(50% - 2px);
+								  	left: 0;
+								  	right: 0;
+								  	bottom: 0;
+								  	width: 90%;
+								  	z-index: -1;
+						  	}
+						  	
+						  	.ct {
+						  	background: #fff;
+						  	display:inline-block;
+						  	padding: 0 10px;
+						  	margin:0;
+						  	width:auto;
+					  			}
+						}
+						
+							a {
+								color:$pink;
+								i {color:inherit;
+								font-size:25px;
+								margin:0 10px;
+								
+								&:hover {
+									color:#000;
+								}
+							}
+						}
+						
+					}
+				}
+	
+			
+		
+	}
+	
+	.advert {
+		position: absolute;
+		display:none;
+		top:0;
+		bottom:0;
+		background-size:cover;
+		background-position:center center;
+		background-repeat:no-repeat;
+		right:0;
+		
+		
+		@media only screen and (min-width:700px) {
+			display:block;
+			left:230px;
+			
+			  //left: -230px;
 		}
 		
-		#menu-toggle:checked + .navigation-menu {
+			
+		
+		.content{
 			position:absolute;
-			top:0;
-			left:0;
-			bottom:0;
-			width:100%;
-			background-color:red;
-			display:block;
+			top:35px;
+			left:35px;
+			right:35px;
+			bottom:35px;
+			border:2px solid $pink;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
 			
+			.detail {
+				
+				max-width:500px;
+				text-align:center;
+				box-sizing:border-box;
+				padding:30px;
 			
-			@media only screen and (min-width:600px) {
-				width:300px;
-				background-color:green;
-			}
-		
-  		}
+			h1 {
+				color:$pink;
+				text-align: center;
+				font-size: 35px;
+				padding: 0 30px;
+				position: relative;
+				z-index: 1;
+				text-align:center;
+				
+					
+				
+				.ct {
+					
+					display:inline-block;
+					padding: 0 5px;
+					margin:0;
+					
+					max-width:350px;
+					width:75%;
 	
+				}
+			}	
+			
+			p {color:#000; display:block;}
+			
+			a {
+				text-decoration:none;
+				margin:20px auto 0 ;
+				background-color:$pink;
+				color:#FFF;
+				font-family: 'Artifact';
+				font-size:22px;
+				letter-spacing:2px;
+				padding:14px 15px 10px;
+				border-radius:7px;
+				display:inline-block;
+				
+				
+				&:hover {
+					background-color:#000;
+				}
+			}
+			
+			}
+		}
 		
+	}
+
 }
-
-
-
-
-/* 
-#menu-toggle:checked + .main-navigation { }
-
-Desktop Version */
-
