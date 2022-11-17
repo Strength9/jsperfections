@@ -147,7 +147,7 @@ add_filter('image_size_names_choose', 'post_image_sizes');
 		wp_enqueue_script( 'xray-modern', get_template_directory_uri() . '/assets/js/modern.js','','',true);
 
 		wp_enqueue_script( 'xray-custom', get_template_directory_uri() . '/assets/js/script.js','','',true);
-		wp_enqueue_script( 'xray-splide', get_template_directory_uri() . '/assets/js/splide.min.js','','',false);
+		wp_enqueue_script( 'xray-splide', get_template_directory_uri() . '/assets/js/gallerylightbox.js','','',false);
 
 
 		wp_dequeue_style( 'wp-block-library' );

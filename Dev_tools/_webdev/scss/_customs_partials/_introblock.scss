@@ -1,0 +1,31 @@
+.pageintro {
+	margin:auto;
+	max-width:800px;
+	text-align:center !important;
+	
+	
+	p.signature {
+		text-align:center;
+		color:#000;
+		font-family: 'Artifact';
+		  font-weight: normal;
+		  font-style: normal;
+		  font-weight: 300;
+		  font-size:32px;
+		  position:relative;
+		  
+		  &:after {
+			  color:$pink;
+			  font-size:24px;
+			  content:"XXX";
+			  position:absolute;
+			  top:50px;
+			  right:-10px;
+			  transform: rotate(-10deg);
+			  
+			 
+			  font-family: 'Artifact';
+			  letter-spacing: 5px;
+		  }
+	}
+}

@@ -1,11 +1,11 @@
 {
-    "key": "group_63642097081ea",
-    "title": "Block - Card Links",
+    "key": "group_63766d453a84f",
+    "title": "Block Gallery",
     "fields": [
         {
-            "key": "field_636420970deb6",
-            "label": "Section Title",
-            "name": "section_title",
+            "key": "field_63766d45725bd",
+            "label": "Gallery Title",
+            "name": "gallery_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -23,9 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_636421c50deb7",
-            "label": "Section Text",
-            "name": "section_text",
+            "key": "field_63766d56725be",
+            "label": "Gallery. Text Before",
+            "name": "gallery_text_before",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -43,9 +43,29 @@
             "delay": 0
         },
         {
-            "key": "field_636422190deb8",
-            "label": "Cards",
-            "name": "cards",
+            "key": "field_63766d83725bf",
+            "label": "Gallery. Text After",
+            "name": "gallery_text_after",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_63766d90725c0",
+            "label": "Gallery Image",
+            "name": "gallery_image",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -56,7 +76,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "row",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -65,9 +85,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6364228f0deb9",
-                    "label": "Card Image",
-                    "name": "card_image",
+                    "key": "field_63766ddd725c1",
+                    "label": "Image File",
+                    "name": "image_file",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -78,7 +98,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -88,46 +108,9 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_636422190deb8"
-                },
-                {
-                    "key": "field_636422bc0deba",
-                    "label": "Card Link",
-                    "name": "card_link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "parent_repeater": "field_636422190deb8"
+                    "parent_repeater": "field_63766d90725c0"
                 }
             ]
-        },
-        {
-            "key": "field_637644e540c5b",
-            "label": "Section Text After Content",
-            "name": "section_textsub",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -135,7 +118,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-links-grid"
+                "value": "acf\/block-gallery-section"
             }
         ]
     ],
@@ -148,5 +131,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668695515
+    "modified": 1668705832
 }

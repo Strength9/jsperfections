@@ -4,7 +4,7 @@
 	background-size:cover !important;
 	background-position:center center !important;
 	background-repeat:no-repeat !important;
-	
+	padding:0;
 	
 	
 	
@@ -29,7 +29,14 @@
 				   justify-content: center;
 				   align-content: center;
 				   align-items: center;
-				 	h1 {color:#FFF; text-align:center; margin:0 auto;}
+				 	h1 {color:#FFF; text-align:center; margin:0 auto;
+						
+						 
+						 @media only screen and (min-width:600px) {
+							 font-size:75px;
+						 }
+						 
+					 }
 				 	img {
 						 width:200px;
 						 margin:30px auto;
@@ -58,7 +65,7 @@
 	&.inner {
 		
 		height:500px;
-		
+		padding:0;
 		
 		.wcp-columns {
 			height:100%;

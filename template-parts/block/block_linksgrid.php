@@ -17,9 +17,15 @@ include('______partials_global.php');
 
 /* --------------------------------------------------------------------------- 
 
-section_title
-section_text
+
+
 */
+
+$section_title_LG = ! empty( get_field('section_title') ) ? '<h1>'.get_field('section_title').'</h1>' : '';
+
+$section_text_LG = ! empty( get_field('section_text') ) ? get_field('section_text') : '';
+
+$section_textsub_LG = ! empty( get_field('section_textsub') ) ? '<div class="linkfooter">'.get_field('section_textsub').'</div>' : '';
 
 $data = '';
 if( have_rows('cards') ):
@@ -45,8 +51,8 @@ if( have_rows('cards') ):
 		endif;
 		
 		$data .= '<article>
-			 	<h1><a class="'.$linkclass.'" href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'">'.esc_html( $link_title ).'</a></h1>	  
-			 	<div class="imagesquare" style="background-image:url('.esc_url($imageurl).');"></div>
+		<a href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'"><h2>'.esc_html( $link_title ).'</h2>	  
+			 	<div class="imagesquare" style="background-image:url('.esc_url($imageurl).');"></div></a>
 		</article>';
 		
 	endwhile;
@@ -59,54 +65,17 @@ endif;
 
 
 
-
 echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="wcp-columns">
 		 <div class="wcp-column full">
-		
-		<h1>Oyr latest Weddings</h1> 
+		'.$section_title_LG.$section_text_LG.'
 
 	<div class="linkgrid">
 	'.$data.'
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
-		<article>
-			 <h1><a href="#" title="">Card heading</a></h1>	  
-			 <div class="imagesquare" style="background-image:url();"></div>
-		</article>
 	</div>	 
-		</div>
-		 <div class="wcp-column"></div>
+	
+	'.$section_textsub_LG.'
+	
 	</div>
 </section>';
 ?>
