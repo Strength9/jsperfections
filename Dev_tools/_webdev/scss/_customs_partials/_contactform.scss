@@ -1,6 +1,14 @@
 .contactform {
 padding:40px 0 !important;
+	background-color:$pink;
 	
+	margin:0 0 80px;
+	@media only screen and (min-width:900px) {
+		margin:0 0 100px 0;
+	}
+	@media only screen and (min-width:1200px) {
+		margin:0 0 100px 0;
+	}
 	
 	.wcp-columns {
 		max-width:$smallcontent;

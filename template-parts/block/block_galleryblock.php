@@ -19,16 +19,17 @@ $gallery_text_after = ! empty( get_field('gallery_text_after') ) ? get_field('ga
 
 // check if the repeater field has rows of data
 if( have_rows('gallery_image') ):
-$a = '';
+$a = '<div class="galleryblock">';
 $string = random_str(12);
 	// loop through the rows of data
 	while ( have_rows('gallery_image') ) : the_row();
 
-		// display a sub field value
-		$a .= '<a class="'.$string.'" href="'.get_sub_field('image_file').'" data-lightbox="'.$string.'" data-title="Click the right half of the image to move forward."><img class="'.$string.'" src="'.get_sub_field('image_file').'" alt=""/></a>';
+		$a .=  ! empty(get_sub_field('image_file') ) ? '<article style="background-image:url('.get_sub_field('image_file').');"><a class="'.$string.'" href="'.get_sub_field('image_file').'" data-lightbox="'.$string.'" data-title="Click the right half of the image to move forward."></a></article>' : '';
+
 
 	endwhile;
 
+$a .= '</div>';
 else :
 
 	// no rows found
