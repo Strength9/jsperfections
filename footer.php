@@ -12,22 +12,31 @@ $social .= ! empty( get_field('instagram_link','options') ) ? '<a href="'.get_fi
 $social .= ! empty( get_field('linkedin_link','options') ) ? '<a href="'.get_field('linkedin_link','options').'" title="Visit us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>' : '';
 
 
+$ftimage = ! empty( get_field('award_footer_logo','options') ) ? '<img src="'.get_field('award_footer_logo','options').'"/>' : '';
+
+
+
+
 ?>
 <footer>
 	<div class="wcp-columns">
-		 <div class="wcp-column ctdetails">		 
+		
+		 <div class="wcp-column links awards">
 			 <ul>
-				 <li class="title">Get In touch</li>
-				 <?php echo $emailaddress.$telephone_number?>
-			 </ul>
-		 </div>
-		 <div class="wcp-column links about">
-			  <?php wp_nav_menu( array(  'menu' => 'Legal','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => ' <ul>
-				 <li class="title">Our Services</li>%3$s</ul>' ) );?> 
+					<li class="title">We are Winners !</li>
+					<li><?php echo $ftimage;?> </li>
+				</ul>
+			
 		  </div>
+		  <div class="wcp-column ctdetails">		 
+			   <ul>
+				   <li class="title">Get In touch</li>
+				   <?php echo $emailaddress.$telephone_number?>
+			   </ul>
+		   </div>
 		 <div class="wcp-column links services">
-			 <?php wp_nav_menu( array(  'menu' => 'Legal','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => ' <ul>
-				<li class="title">Our Services</li>%3$s</ul>' ) );?> 
+			 <?php wp_nav_menu( array(  'menu' => 'Preffered','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => ' <ul>
+				<li class="title">Preffered Venues</li>%3$s</ul>' ) );?> 
 		 </div>
 		 <div class="wcp-column links legal">
 			 <?php wp_nav_menu( array(  'menu' => 'Legal','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => ' <ul>
@@ -42,14 +51,10 @@ $social .= ! empty( get_field('linkedin_link','options') ) ? '<a href="'.get_fie
 	</div>
 	<div class="copyright">
 		<div class="wcp-columns">
-		 <div class="wcp-column copystatement">Copyright J’s Perfections Weddings And Occasions 2022  |  Site Design and Build By Strength 9</div>
+		 <div class="wcp-column copystatement">Copyright J’s Perfections Weddings And Occasions <?php echo date("Y");?>  |  Site Design and Build By Strength 9</div>
 		 <div class="wcp-column legallinks">
-			 <ul class="legalfoot">
-				<li><a href="#">Terms of Sale</a></li>      
-				<li><a href="#">Terms & Conditions</a></li>      
-				<li><a href="#">Privacy Policy</a></li>      
-				<li><a href="#">Contact</a></li>
-			 </ul>
+			 <?php wp_nav_menu( array(  'menu' => 'Bottom Foot','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => '<ul class="legalfoot">
+				%3$s</ul>' ) );?>  
 		 </div>
 		</div>
 		 		 

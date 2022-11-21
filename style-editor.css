@@ -162,7 +162,12 @@ h1, h2, h3, h4, h5 {
 h1 {
   color: #C05B57;
   margin-top: 0;
-  font-size: 3.2rem;
+  font-size: 2.2rem;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3.2rem;
+  }
 }
 
 h2 {
@@ -194,6 +199,10 @@ ul a, ol a, p a {
 }
 ul a:hover, ol a:hover, p a:hover {
   color: #efacaa;
+}
+
+ul {
+  line-height: 1.7;
 }
 
 p {
@@ -510,6 +519,9 @@ footer .wcp-columns .wcp-column {
   background-size: contain;
   background-repeat: no-repeat;
 }
+footer .wcp-columns .wcp-column.awards img {
+  max-width: 200px;
+}
 footer .wcp-columns .wcp-column ul {
   margin: 0;
   padding: 0 0 50px;
@@ -558,7 +570,7 @@ footer .wcp-columns .wcp-column ul li.title {
   font-weight: 300;
   font-size: 30px;
   line-height: 40px;
-  margin: 25px 0 40px;
+  margin: 25px 0 20px;
 }
 footer .wcp-columns .wcp-column ul li.title.andsocial {
   margin: 35px 0 20px;
@@ -586,7 +598,7 @@ footer .wcp-columns .wcp-column.ctsocial ul li.title {
   flex: 0 0 230px;
 }
 footer .wcp-columns .wcp-column.ctsocial ul li.social {
-  margin: 5px 0 0 20px;
+  margin: -3px 0 0 20px;
   flex: 0 0 100px;
 }
 footer .wcp-columns .links {
@@ -1184,25 +1196,35 @@ section.small {
   z-index: 1;
   text-align: center;
 }
-.quotedivider .lined:before {
-  border-top: 1px solid #C05B57;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: calc(50% - 2px);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 90%;
-  z-index: -1;
+@media only screen and (min-width: 600px) {
+  .quotedivider .lined:before {
+    border-top: 1px solid #C05B57;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    z-index: -1;
+  }
 }
 .quotedivider .lined .ct {
+  max-width: 90%;
   background: #fff;
   display: inline-block;
   padding: 0 0px;
-  margin: 0;
+  margin: 0 auto;
   font-family: arno-pro-caption, serif;
   width: auto;
+}
+@media only screen and (max-width: 599px) {
+  .quotedivider .lined .ct {
+    border-top: 1px solid #C05B57;
+    padding: 30px 0;
+    border-bottom: 1px solid #C05B57;
+  }
 }
 .quotedivider .lined .ct p {
   padding: 0;
@@ -1238,17 +1260,17 @@ section.small {
 }
 @media only screen and (min-width: 600px) {
   .imageandtext {
-    padding: 0px 0 50px;
+    padding: 80px 0 50px;
   }
 }
 @media only screen and (min-width: 900px) {
   .imageandtext {
-    padding: 0px 0 50px;
+    padding: 80px 0 50px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .imageandtext {
-    padding: 0px 0 50px;
+    padding: 120px 0 50px;
   }
 }
 .imageandtext .wcp-columns {

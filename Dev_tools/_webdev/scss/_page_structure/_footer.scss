@@ -34,6 +34,15 @@ footer {
 		background-size: contain;
 		background-repeat:no-repeat;
 		
+		&.awards {
+			
+			
+			img {
+				max-width:200px;
+			}
+			
+		}
+		
 		
 		ul {
 			margin:0;
@@ -84,7 +93,7 @@ footer {
 					  font-weight: 300;
 					  font-size:30px;
 					  line-height:40px;
-					  margin:25px 0 40px;
+					  margin:25px 0 20px;
 					  
 					  &.andsocial {
 						  margin:35px 0 20px;
@@ -120,7 +129,7 @@ footer {
 					flex: 0 0 230px;
 				}
 				li.social {
-					margin:5px 0 0 20px;
+					margin:-3px 0 0 20px;
 					flex: 0 0 100px;
 					
 				}
