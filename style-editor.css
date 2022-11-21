@@ -1256,21 +1256,21 @@ section.small {
 }
 
 .imageandtext {
-  padding: 80px 0;
+  padding: 50px 0;
 }
 @media only screen and (min-width: 600px) {
   .imageandtext {
-    padding: 80px 0 50px;
+    padding: 80px 0 0px;
   }
 }
 @media only screen and (min-width: 900px) {
   .imageandtext {
-    padding: 80px 0 50px;
+    padding: 80px 0 0px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .imageandtext {
-    padding: 120px 0 50px;
+    padding: 80px 0 0px;
   }
 }
 .imageandtext .wcp-columns {
@@ -1473,7 +1473,7 @@ section.small {
   }
 }
 .heroheader.inner {
-  height: 500px;
+  height: 400px;
   padding: 0;
 }
 .heroheader.inner .wcp-columns {
@@ -1813,6 +1813,22 @@ section.small {
   margin: auto;
   max-width: 800px;
   text-align: center !important;
+  padding: 50px 0 0;
+}
+@media only screen and (min-width: 600px) {
+  .pageintro {
+    padding: 80px 0 0px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .pageintro {
+    padding: 80px 0 0px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .pageintro {
+    padding: 120px 0 0px;
+  }
 }
 .pageintro p.signature {
   text-align: center;
