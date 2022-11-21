@@ -2042,7 +2042,7 @@ body.lb-disable-scrolling {
   display: block;
   position: relative;
   width: 100%;
-  border: 1px solid #C05B57;
+  border: 0px solid #C05B57;
   border-radius: 10px;
   background-size: cover;
   background-repeat: no-repeat;
