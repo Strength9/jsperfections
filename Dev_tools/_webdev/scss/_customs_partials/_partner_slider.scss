@@ -63,11 +63,11 @@
 	}
 	
 	ul.partners {
-		max-width:900px;
+		max-width:1020px;
 		
 		display: grid; 
 	  grid-template-columns: 1fr; 
-	  grid-template-rows: repeat(minmax(10px 180px),3); 
+	  grid-template-rows: repeat(minmax(10px 180px),4); 
 	  gap: 20px 10px; 
 	 
 	  
@@ -76,7 +76,7 @@
 	  
 	  @media only screen and (min-width:540px) {
 			gap: 0px 30px; 
-			grid-template-columns: 1fr 1fr 1fr; 
+			grid-template-columns: 1fr 1fr 1fr 1fr; 
 			grid-template-rows: repeat(minmax(10px 180px),1); 
 		}
 	  @media only screen and (min-width:700px) {

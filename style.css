@@ -1412,10 +1412,10 @@ p.signature:after {
   }
 }
 .partnerslider ul.partners {
-  max-width: 900px;
+  max-width: 1020px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(minmax(10px 180px), 3);
+  grid-template-rows: repeat(minmax(10px 180px), 4);
   gap: 20px 10px;
   margin: 60px 0 0;
   padding: 0;
@@ -1423,7 +1423,7 @@ p.signature:after {
 @media only screen and (min-width: 540px) {
   .partnerslider ul.partners {
     gap: 0px 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(minmax(10px 180px), 1);
   }
 }
