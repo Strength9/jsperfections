@@ -19,7 +19,7 @@ include('______partials_global.php');
  
  $quote_text = ! empty( get_field('quote_text') ) ? get_field('quote_text') : 'quote text';
  
-echo '<section '.$anchor.' class="'.$blockclass .' small">
+echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="lined"><div class="ct">'.$quote_text.'</div></div>
 </section>';
 ?>
