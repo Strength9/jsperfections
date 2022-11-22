@@ -34,7 +34,7 @@
 	if( $adimage ):
 		$url = $adimage['url'];
 		$advertBGoutput = 'style="
-		background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('.esc_url($url).');"';
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('.esc_url($url).');background-repeat:no-repeat;background-size:cover;"';
 	else :
 		$advertBGoutput = '';
 	endif;
