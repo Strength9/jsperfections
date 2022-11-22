@@ -20,11 +20,11 @@
 		.contentside { 
 			grid-area: contentside;
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			flex-wrap: wrap;
 			justify-content: flex-start;
-			align-content: center;
-			align-items: center;
+			align-content: flex-start;
+			align-items: flex-start;
 			
 		 }
 		.imageside { grid-area: imageside;
@@ -57,12 +57,63 @@
 					&:last-child {
 						margin-bottom:0;
 					}
-				}
 				
+					&.signature {
+						display:block;
+						color:#000;
+						font-family: 'Artifact';
+						  font-weight: normal;
+						  font-style: normal;
+						  font-weight: 300;
+						  font-size:32px;
+						  position:relative;
+						  
+						  &:after {
+							  color:$pink;
+							  font-size:24px;
+							  content:"XXX";
+							  position:absolute;
+							  top:50px;
+							  right:-10px;
+							  transform: rotate(-10deg);
+							  
+							 
+							  font-family: 'Artifact';
+							  letter-spacing: 5px;
+						  }
+					}
+				}
 				
 			 }
 			
 		}
 	}
 	
+}
+
+
+p.signature {
+	display:block;
+	color:#000;
+	font-family: 'Artifact';
+	  font-weight: normal;
+	  font-style: normal;
+	  font-weight: 300;
+	  font-size:32px;
+	  position:relative;
+	  margin-bottom:50px;
+	  
+	  &:after {
+		  color:$pink;
+		  font-size:24px;
+		  content:"XXX";
+		  position:absolute;
+		  top:50px;
+		  right:-10px;
+		  transform: rotate(-10deg);
+		  
+		 
+		  font-family: 'Artifact';
+		  letter-spacing: 5px;
+	  }
 }

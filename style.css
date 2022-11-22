@@ -1250,11 +1250,11 @@ section.small {
 .imageandtext .wcp-columns .contentside {
   grid-area: contentside;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-content: center;
-  align-items: center;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 .imageandtext .wcp-columns .imageside {
   grid-area: imageside;
@@ -1289,6 +1289,50 @@ section.small {
   .imageandtext .wcp-columns .contentside p:last-child {
     margin-bottom: 0;
   }
+  .imageandtext .wcp-columns .contentside p.signature {
+    display: block;
+    color: #000;
+    font-family: "Artifact";
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    position: relative;
+  }
+  .imageandtext .wcp-columns .contentside p.signature:after {
+    color: #C05B57;
+    font-size: 24px;
+    content: "XXX";
+    position: absolute;
+    top: 50px;
+    right: -10px;
+    transform: rotate(-10deg);
+    font-family: "Artifact";
+    letter-spacing: 5px;
+  }
+}
+
+p.signature {
+  display: block;
+  color: #000;
+  font-family: "Artifact";
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 50px;
+}
+p.signature:after {
+  color: #C05B57;
+  font-size: 24px;
+  content: "XXX";
+  position: absolute;
+  top: 50px;
+  right: -10px;
+  transform: rotate(-10deg);
+  font-family: "Artifact";
+  letter-spacing: 5px;
 }
 
 .partnerslider {
