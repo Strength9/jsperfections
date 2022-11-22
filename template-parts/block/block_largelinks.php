@@ -45,7 +45,7 @@ if( have_rows('cards') ):
 		
 		$data .= '<article  style="background-image:url('.esc_url($imageurl).');">
 		<a href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'">
-		<h3>Preffered Partner for</h3>
+		<h3>Preferred Partner for</h3>
 		<h2>'.esc_html( $link_title ).'</h2>	  
 		</a>
 		</article>';
