@@ -36,7 +36,7 @@ $ftimage = ! empty( get_field('award_footer_logo','options') ) ? '<img src="'.ge
 		   </div>
 		 <div class="wcp-column links services">
 			 <?php wp_nav_menu( array(  'menu' => 'Preffered','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => ' <ul>
-				<li class="title">Preffered Venues</li>%3$s</ul>' ) );?> 
+				<li class="title">Preferred Venues</li>%3$s</ul>' ) );?> 
 		 </div>
 		 <div class="wcp-column links legal">
 			 <?php wp_nav_menu( array(  'menu' => 'Legal','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => ' <ul>
